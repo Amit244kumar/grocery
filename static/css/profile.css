@@ -1,0 +1,38 @@
+#profile{
+    position: relative;
+    top: 300px;
+    left: 200px;
+    width: fit-content;
+}
+#profile #account h1{
+    font-size: 33px;
+    margin-bottom: 17px; 
+}
+#profile #account #logout{
+    font-size: 20px;
+    color: rgb(137 199 74);
+    text-decoration: underline;
+}
+#profile #account #logout:hover{
+    color:orangered;
+}
+#profile #flex-item{
+    display: flex;
+    margin-top: 51px;
+    
+}
+#profile #flex-item #account-details{
+    position: relative;
+    left: 700px;    
+
+}
+
+#profile #flex-item #order h1{
+    font-size: 33px;
+    margin-bottom: 17px;
+}
+
+#profile #flex-item #account-details h1{
+    font-size: 33px;
+    margin-bottom: 17px;
+}

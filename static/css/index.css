@@ -1,0 +1,838 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* header css start */
+/* add to cart */
+#e33fgh{
+    position: relative;
+    top: 300px;
+    width: fit-content;
+    margin: auto;
+}
+#e33fgh #empty{
+    font-size: xx-large;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+#e33fgh #shop{
+    margin-left: 61px;
+    background-color: rgb(137 199 74);;
+    padding: 12px 19px;
+    border-radius: 27px;
+    color: white;
+    font-weight: 100;
+}
+#e33fgh #shop:hover{
+    background-color: orangered;
+}
+
+#add-to-cart{
+    width: 384px;
+    background-color: white;
+    height: 765px;
+    position: fixed;
+    left: 1528px;
+    top: 0px;
+    z-index: 99999;
+    transition: 0.5s;
+}
+#add-to-cart .fa-xmark{
+    float: right;
+    font-size: 40px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+#add-to-cart #cart-content{
+    position: relative;
+    top: 250px;
+}
+#add-to-cart #cart-content h1
+{
+    font-size: xx-large;
+    text-align: center;
+    margin-left: 35px;
+    font-weight: 100;
+}
+#add-to-cart #cart-content #btn{
+    width: fit-content;
+    margin: auto;
+    background-color: rgb(137 199 74);;
+    padding: 10px;
+    border-radius: 41px;
+    transition: 1s;
+}
+#add-to-cart #cart-content #btn:hover{
+    background-color: #ff6600;
+}
+
+#add-to-cart #cart-content .yt{
+    width: fit-content;
+    margin: auto;
+    margin-top: 17px;
+    transition: 1s;
+}
+#add-to-cart #cart-content .yt a:hover{
+    color: rgb(137 199 74);
+}
+/* first header */
+
+#first-header-info{
+    margin: -8px;
+    background-color: rgb(137 199 74);
+    display: flex;
+}
+#information{
+    position: relative;
+    left: 100px;
+    top:10px; 
+}
+#information a{
+    color: white;
+    text-decoration: none;
+    padding: 0px 10px;
+    transition: 0.5s;
+}
+#information a:hover{
+    color:black;
+}
+#information a i{
+    padding: 0px 3px;
+}
+
+
+#navigation-bar{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    position: relative;
+    left:898px; 
+}
+
+#navigation-bar li a{
+    color: aliceblue;
+    transition: 0.5s;
+}
+#navigation-bar li a:hover{
+    color:black;
+}
+
+/* second header */
+#second-header-info{
+    margin:23px 0px;
+    display: flex;
+}
+
+.second-header-content{
+    padding-left: 200px;
+
+}
+#second-header-info #logo{
+    position: relative;
+    right: 105px;
+    top: 3px;
+}
+#second-header-info ol{
+    display: flex;
+    position: relative;
+    right: 123px;
+}
+
+#second-header-info ol,a{
+    padding: 0px 9px;
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: 0.5s;
+    cursor:pointer;
+}
+
+#second-header-info ol,a:hover{
+    color: rgb(137 199 74);
+}
+#second-header-info ul{
+    display: flex;
+    list-style-type: none;
+    position: relative;
+    right: 50px;
+}
+#second-header-info ul li{
+    padding:0px 10px;
+}
+
+#searching-product{
+    display: flex;
+}
+#all-categories-product{
+    border: 1px solid #e9e9e9;
+    width: 390px;
+    height: 50px;
+    margin-left: 60px ; 
+    cursor: pointer;
+    z-index: 1;
+}
+#all-categories-product span{
+    position: relative;
+    top: 10px;
+    left: 20px;
+} 
+#all-categories-product i{
+    float: right;
+    margin-top: 16px;
+    margin-right: 24px;  
+}
+#all-categories-product #dropdown{
+    list-style-type: none;
+    padding: 0px;
+    margin-top: 28px;
+    background-color: #f9f9f9;
+    display: none;
+}
+#all-categories-product #dropdown li{
+    padding: 14px 25px;
+    border: 1px solid #e9e9e9;
+    font-weight: normal;
+    transition: all .3s linear;
+   font-family: var(--font-additional-family);
+}
+
+#all-categories-product #dropdown li:hover{
+    background-color: rgb(255, 46, 46);
+}
+
+#search-for-product input{
+    width: 900px;
+    height: 50px;
+    border: 1px solid #e9e9e9;
+    font-size: 17px;
+    padding: 20px;
+    transition: 0.5s;
+}
+#search-for-product input:focus{
+    outline: none;
+    border: 1px solid rgb(137 199 74);
+    place-content: none;
+    transition: 0.5s;
+}
+#search-for-product input:focus::placeholder{
+    color: transparent;
+}
+#search-icon{
+    height: 50px;
+    width: 80px;
+    border: 1px solid #e9e9e9; 
+    background-color:  rgb(137 199 74); 
+    cursor: pointer;
+    transition: 0.5s;
+}
+#search-icon i{
+    margin: 18px;
+    margin-left:30px;
+    color:white;
+
+}
+#search-icon:hover{
+    background-color: rgb(255, 46, 46);
+}
+#scrolling-header{
+    background-color: white;
+    height: 232px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    margin: 0px -7px;
+    z-index: 99;
+    transition: 0.5s;
+    box-shadow: 0px 2x 10px grey; 
+}
+
+/* header css end */
+
+/* sliding image section css start */
+  
+   
+/* first image start css */
+#image{
+    margin-left: 0px;
+   
+}
+#image img{
+   width: 87%;
+   transform: scale(1.3);
+   margin-top: 108px;
+   height: 100%;
+  
+}
+
+#image-content{
+    display: flex;
+    flex-direction:column;
+    position: relative;
+    bottom: 403px;
+    left: 882px;
+    width: fit-content;
+}
+#image-content #cxsgg{
+    
+    font-weight: 400;
+    letter-spacing: normal;
+    margin: 0px;
+}
+#image-content #ffgss{
+    font-size: 4.0rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: rgb(137 199 74);
+    width: 300px;
+    margin: 0px;
+}
+#image-content #jfhgb{
+    font-size: 2.0rem;
+    line-height: 30px;
+    margin-top: 6px;
+}
+#image-content #button{
+    margin-top: 20px;
+    width: 107px;
+    padding: 13px;
+    border-radius: 30px;
+    background-color: rgb(137 199 74);
+    transition: 1s; 
+}
+#image-content #button:hover{
+    background-color:rgb(255, 46, 46);
+}
+/* first image css end */
+/* second image css start */
+#image1-content{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 100px;
+    left: 500px;
+}
+#image1-content .banner_sub_heading{
+    font-weight: 100;
+    letter-spacing: normal;
+    font-size: 1.6rem;
+    margin: 10px;
+}
+#image1-content .h1{
+    font-size: 3.8rem;
+    font-weight: bold;
+    color: #d08126;
+    font-family: cursive;
+    margin: 0px;
+}
+#image1-content #banner_text{
+    font-weight: 500;
+    font-size: 32px;
+}
+#image1-content #banner_button{
+    background-color: #d08126;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 46px;
+    margin-top: 15px;
+    transition: 1s;
+}
+#image1-content #banner_button:hover{
+    background-color: black;
+}
+/* second image css end */
+/* third image css start */
+#image2-content{
+    position: relative;
+    bottom: 447px;
+    left: 530px;
+    padding: 30px;
+    width: fit-content;
+    border: 7px solid rgb(137 199 74);
+}
+#image2-content #banner_head{
+    text-align: center;
+    font-size: 30px;
+    margin: 137px;
+    font-weight: bold;
+    font-family: auto;
+}
+#image2-content #banner_sub_head{
+    color: red;
+    width: 395px;
+    font-size: 50px;
+    font-family: cursive;
+}
+#image2-content #off{
+    margin: 5px;
+    font-size: 44px;
+    font-family: fangsong;
+}
+#image2-content #btn{
+    width: fit-content;
+    padding: 13px;
+    background-color: white;
+    border-radius: 36px;
+    transition: 1s;
+}
+#image2-content #btn:hover{
+    background-color: rgb(255, 46, 46);
+    
+}
+/* third image css end */
+/* sliding image section css end */
+
+/* sliding button css start */
+.arrow{
+    font-size: 20px;
+    width: 51px;
+    padding: 7px;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: rgb(137 199 74);
+    transition: 1s;
+}
+#left-arrow{
+    position: relative;
+    bottom: 359px;
+    left: -7px;
+
+}
+#right-arrow{
+    position: relative;
+    bottom: 400px;
+    float: right;
+   
+}
+.arrow:hover{
+    background-color: rgb(255, 46, 46);
+}
+/* sliding button css end */
+
+#sub-images{
+    display: flex;
+    position: relative;
+    top: 343px;
+    left: 46px;
+    width: fit-content; 
+}
+#sub-images .left-side-image-content{
+   width: fit-content;
+
+}
+#sub-images .left-side-image-content img{
+    width: 686px;
+    margin: 0px 20px;
+    height: 250px;
+}
+#sub-images .content{
+    position: relative;
+    left: 422px;
+    bottom: 275px;
+    width: 284px;
+    height: 59%;
+
+    border-top-left-radius: 420px;
+    border-bottom-left-radius: 420px;
+    transition: 0.5s;
+
+}
+#sub-images .content:hover{
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+#sub-images .content .text{
+    width: fit-content;
+    position: relative;
+    top: 44px;
+    left: 67px;
+}
+#sub-images .content .text span{
+    margin: 4px -3px;
+    font-size: 21px;
+    position: relative;
+    top: -10px;
+}
+
+#sub-images .content .text .btn{
+    width: 107px;
+    padding: 10px;
+    background: #ff6600;
+    border-radius: 30px;
+    position: relative;
+    font-size: 15px;
+    left: -11px;
+    transition: 1s;
+}
+#sub-images .content .text .btn a{
+    color: whitesmoke;
+    margin: 6px;
+}
+
+#sub-images .content .text .btn:hover{
+    background-color: rgb(137 199 74);
+}
+
+
+#grocery-categories #heading{
+    text-align: center;
+}
+#grocery-categories #heading h2{
+    color:rgb(137 199 74);
+    font-size: 36px;
+    margin-top: 0px;
+}
+#grocery-categories #product-icons{
+   display: flex;
+}
+#grocery-categories #product-icons .icons{
+    margin: 18px 58px;
+    position: relative;
+    padding: 20px;
+    left: 257px;
+    border-radius: 91px;
+    height: 114px;
+    cursor: pointer;
+    transition: 1s;
+  
+}
+#fruit{
+    background-color: rgb(137 199 74);
+}
+#flour{
+    background-color: rgb(167, 218, 250);
+}
+#meat{
+    background-color: rgb(249, 241, 168);
+}
+#vege{
+    background-color: pink;
+}
+#grocery-categories #product-icons .icons:hover{
+    background-color:rgb(137 199 74);
+}
+#grocery-categories #product-icons .icons img{
+    position: relative;
+    left: 21px;
+    top: 7px;
+}
+#grocery-categories #product-icons .icons span{
+    position: relative;
+    right: 42px;
+    top: 24px;
+    font-size: 19px;
+    font-weight: bolder;
+}
+#grocery-categories #product-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+#grocery-categories #product-list .product-img{
+    width: 447px;
+    border: 1px solid grey;
+    margin: 19px 25px;
+    height: 524px;
+    text-align: center;
+    border-radius: 23px;
+}
+#grocery-categories #product-list .product-img:hover{
+    border: 1px solid rgb(137 199 74);
+}
+#grocery-categories #product-list .product-img img{
+    transition: 1s;
+    margin: 0px 47px;
+}
+#grocery-categories #product-list .product-img img:hover{
+    transform: scale(1.1);
+}
+#grocery-categories #product-list .product-img .product-details{
+    position: relative;
+    top: 50px;
+    font-weight: bolder;
+    font-size: 21px;
+}
+#grocery-categories #product-list .product-img .product-details div{
+    width: fit-content;
+    align-items: center;
+    position: relative;
+    margin: auto;
+    padding: 12px;
+    top: -18px;
+    border-radius: 59px;
+    background-color:rgb(137 199 74);
+    transition: 1s;
+}
+#grocery-categories #product-list .product-img .product-details div:hover{
+    background-color: #d08126;
+}
+#grocery-categories #product-list .product-img i{
+    background-color: black;
+    color: whitesmoke;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 30px;  
+    cursor: pointer;
+    align-items: center;
+    transition: 1s;
+}
+#grocery-categories #product-list .product-img i:hover{
+    background-color:#ff6600;
+}
+
+#background-image #bg img{
+    width: -webkit-fill-available;
+}
+#background-image #bg-content{
+    position: relative;
+    width:398px;
+    top: 142px;
+    left: 300px;
+    z-index: 1;
+}
+#background-image #bg-content h1{
+    color: rgb(137 199 74);
+    width: 470px;
+    font-family: cursive;
+}
+#background-image #bg-content span{
+    margin-left: 140px;
+    font-family: cursive;
+}
+#subscribe-banner{
+    margin-top: 297px;
+    position: relative;
+    left: -269px;
+}
+#subscribe-banner #banner-content{
+    position: absolute;
+    left: 751px;
+    z-index: 25;
+    bottom: 129px;
+}
+#subscribe-banner #banner-content #sub{
+    width: 442px;
+    height: 53px;
+    border-radius: 31px;
+    font-size: 18px;
+    border: 0px;
+    padding-left: 19px;
+}
+#subscribe-banner #banner-content #sub:focus{
+   outline: none;
+}
+#subscribe-banner #banner-content a{
+    position: relative;
+    left: -100px;
+    font-size: 20px;
+    border: 0px;
+    padding: 14px;
+    padding-left: 34px;
+    padding-right: 30px;
+    border-radius: 33px;
+    background-color: rgb(137 199 74);
+    color: white;
+}
+#subscribe-banner #banner-content a:hover{
+ background-color: #d08126;
+}
+
+#swiper-slider{
+    margin: 80px 178px;
+    width: 1156px;
+    overflow: hidden;
+}
+#swiper-slider #flex-item{
+    display: flex;
+    list-style-type: none;
+    height: 141px;
+    position: relative;
+    left: 44px;
+}
+#swiper-slider #flex-item li{
+    position: absolute;
+    left: 100px;
+}
+/* #swiper-slider #swiper-ball{
+    font-size: 44px;
+    color: orange;
+}
+#swiper-slider #swiper-ball li{
+     display: flex;
+} */
+
+/* footer css start */
+#footer{
+   background-image: url('footer.webp');  
+   width: 101%;
+   height: 500px; 
+   margin: -8px;
+
+}
+
+#footer-list-item{
+    display: flex;
+    position: relative;
+    left: 300px;
+    top:-100px;
+    width: fit-content;
+}
+
+#footer-list-item .list-heading{
+    color: white;
+    font-size: 23px;
+    font-family: cursive;
+    font-weight: bolder;
+    margin-left: 11px;
+    margin-bottom: 28px;
+    position: relative;
+    top: -17px;
+}
+
+#footer-list-item .list-items{
+    margin: 0px 77px;
+    list-style-type: none;
+}
+
+#footer-list-item .list-items .item{
+    font-size: 15px;
+   margin-bottom: 16px;
+}
+
+#footer-list-item .list-items .item .a{
+   color: white;
+   margin-right:10px;
+}
+
+#footer-list-item .list-items  .a:hover{
+    color: green;
+}
+
+#address-list{
+    width: 234px;
+}
+
+#address-list #ad{
+    position: relative;
+    left: 45px;
+    top: 181px;
+}
+
+#address-list ul .li{
+    list-style-type: none;
+    color: white;
+    margin-bottom: 22px;
+} 
+
+.ar{
+    font-weight: 900;
+    margin-right: 10px;
+
+} 
+
+#add-to-cart #cart-Product-container h1{
+    margin-top: 2px;
+    margin-left: 13px;
+    font-size: xx-large;
+    font-family: cursive;
+}
+#add-to-cart #cart-products{
+    height: 493px;
+    overflow-x: auto;
+}
+#cart-products .product-content{
+    display: flex;
+}
+#cart-products .product-content img{
+    width: 136px;
+    height: 98px;
+    object-fit: contain;
+}
+#cart-products .product-content #description{
+    margin-left: 26px;
+}
+#cart-products .product-content h1{
+    margin-bottom: 0px;
+}
+#cart-products .product-content p{
+    margin-top: 2px;
+}
+#cart-products .product-content span{   
+    padding: 0px 16px;
+    font-size: 22px;
+    border: 1px solid grey;
+    transition: 1s;
+}
+#cart-products .product-content #left:hover,#right:hover{
+    background-color: rgb(137 199 74);
+} 
+#cart-products .product-content #left{
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    margin: -1px;
+    cursor: pointer;
+}
+#cart-products .product-content #right{
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    margin: -1px;
+    cursor: pointer;
+}
+#cart-products .product-content #delete-product{
+    border-radius: 81px;
+    padding: 0px 11px 4px 12px;
+    background-color: green;
+    cursor: pointer;
+}
+
+#cart-products .product-content .pr{
+    border: none;
+    padding: 0px;
+    font-size:19px;
+}
+#cart-products .product-content #delete-product i{
+    font-size: 13px;
+    color: white;
+}
+
+#add-to-cart #cart-details #cart-price{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 20px;
+}
+#add-to-cart #cart-details #cart-price p{
+    font-weight: 700;
+}
+
+#add-to-cart #cart-details>p{
+    width: fit-content;
+    margin: auto;
+
+}
+#add-to-cart #Btn{
+    margin-top: 26px;
+}
+#add-to-cart #Btn a{
+    padding: 14px 57px;
+    margin: 0px 2px;
+    background-color: rgb(137 199 74);
+    border-radius: 34px;
+    color: white;
+}
+
+    
+#added-product{
+    position: fixed;
+    top: 589px;
+    z-index: 1;
+    left: 13px;
+    font-size: 17px;
+    padding: 17px;
+    background-color: rgb(137 199 74);
+    border-radius: 31px;
+    color: white;
+    display: none;
+    transition:all 1s;      
+}

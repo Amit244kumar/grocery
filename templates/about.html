@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <script src="{% static 'js/index.js' %}"></script>
+    <script src="https://kit.fontawesome.com/64edd0846d.js" crossorigin="anonymous"></script>
+</head>
+<body id="body">
+    <span  id="email">{{ request.session.emailId }}</span>
+    <section id="add-to-cart">
+        <i class="fa-solid fa-xmark" onclick="addToCartClose()"></i>
+        {% if request.session.emailId %}
+            {% if items %}
+                <div id="cart-Product-container">
+                    <h1>Your cart</h1>
+                    <div id="cart-products">
+                        {% for item in items %}
+                            <div class="product-content" >
+                                <img src={% static 'img/' %}{{ item.imageName }} class="image">
+                                <div id="description" >
+                                    <h2>{{ item.name }}</h2>
+                                    <p>price : Rs.<span class="pr"> {{ item.price }}</span></p>
+                                    <div>
+                                    <span id="left" onclick="decrement({{ forloop.counter }})">-</span><span class="val">{{ item.quantity }}</span><span id="right" onclick="increment({{ forloop.counter }})">+</span>
+                                    <span id="delete-product" onclick="deleteProduct({{ forloop.counter }})"><i class="fa-solid fa-trash-can"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        {%  endfor %}
+                    </div>
+                    <din id="cart-details">
+                        <div id="cart-price">
+                            <p>subtotal</p>
+                            <p>Rs.<span class="totalPrice">0</span> USD</p>
+                        </div>  
+                        <p>Taxes and shipping calculated at checkout</p>
+                        <div id="Btn">
+                            <a href="#">view cart</a>
+                            <a href="#">check Out</a>
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+         <div id="e33fgh">
+             <h1 id="empty">Your Cart Is Empty</h1>
+             <a href="http://localhost:8000/shop/" id="shop">
+             <span>Continue shoping</span>
+             </a>
+         </div>
+     {% endif %}
+        {% else %}
+        <div id="cart-content">
+            <h1>Your Card Is Empty</h1>
+            <div id="btn">
+                <a href="#" style="color: white; font-weight: 100;">Continue shopping</a>
+            </div>
+            <p class="yt">Have an account</p>
+            <p class="yt"><a href="./login.html" style="text-decoration: underline; padding-right: 7px;">login in</a>to check out faster</p>
+        </div>
+        {% endif %}
+    </section>
+    <h1 id="added-product">your product is added to cart</h1>
+    <div id="scrolling-header">
+        <header id="first-header-info" class="header">
+            <div id="information">
+                     <a href="mail"><i class="fa-solid fa-envelope"></i>info@example.com</a>
+                     <a href="tel"><i class="fa-solid fa-phone"></i>0000-344224</a>
+            </div>
+            <div id="navigation">
+            <nav id="social-media">
+                        <ol id="navigation-bar">
+                            <li id="twiter">
+                                <a href="#">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li id="facebook">
+                                <a href="#">
+                                    <i class="fa-brands fa-square-facebook"></i>
+                                </a>
+                            </li>
+                            <li id="pin">
+                                <a href="#">
+                                    <i class="fa-brands fa-pinterest"></i>
+                                </a>
+                            </li>
+                            <li id="instagram">
+                                <a href="#">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </li>
+                        </ol>
+            </nav>
+        </header>
+    
+        <header id="second-header-info" class="header">
+             <a href="#" class="second-header-content" id="logo">
+                <img src="{% static 'img./logo.webp' %}" alt="" srcset="">
+             </a>
+             <nav class="second-header-content">
+                <ol>
+                    <a href="http://localhost:8000/">
+                        <li>Home</li>
+                    </a>
+                    <a href="http://localhost:8000/shop/">
+                        <li>shop</li>
+                    </a>
+                    <!-- <a href="">
+                        <li><i class="fa-solid fa-angle-down"></i>Best sellers</li>
+                    </a> -->
+                    <a href="">
+                        <li>Deal of The Day</li>
+                    </a>
+                    <a href="http://localhost:8000/about/">
+                        <li style="color:rgb(137 199 74)">Pages</li>
+                    </a>
+                    <a href="http://localhost:8000/contact/">
+                        <li>contant us</li>
+                    </a>
+                </ol>
+             </nav>
+            <nav class="second-header-content" >
+                <ul>
+                    {% if request.session.emailId %}
+                    {{ request.session.name }}<a href="http://localhost:8000/profile/"><li><i class="fa-solid fa-user-tie"></i></i></li></a>
+                {% else %}
+                      <a href="http://localhost:8000/login/"><li><i class="fa-solid fa-user-tie"></i></i></li></a>
+                {% endif %}
+                    <a href="#"><li onclick="addToCartOpen()"><i class="fa-sharp fa-solid fa-cart-shopping"></i></li></a>
+                    <a href="wishlist.html"><li><i class="fa-solid fa-heart"></i></li></a>
+                </ul>
+            </nav>
+            <br>
+    
+    
+        </header>
+      
+
+        <section id="searching-product" >
+            <div id="all-categories-product" onclick="toggle()">
+                <span>All categories</span>
+                <i class="fa-solid fa-angle-down"></i>
+                <ul id="dropdown">
+                    <li>
+                        <a href="#">Fruits</a>
+                    </li>
+                    <li>
+                        <a href="#">Vegetables</a>
+                    </li>
+                    <li>
+                        <a href="#">Flour</a>
+                    </li>
+                    <li>
+                        <a href="#">Cookies</a>
+                    </li>
+                    <li>
+                        <a href="#">Meat</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="search-for-product" >
+                <input type="search" placeholder="search">
+            </div>
+            <div id="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </section>
+    </div>
+    <section id="about-section">
+        <div id="head">
+             <div id="head-content">
+                <h1>About us</h1>
+                <p id="para"><a href="http://localhost:8000/" id="a" >Home</a>/ About us</p>
+             </div>
+        </div>
+        <section>
+            <div id="suppliers-section">
+                 <div class="img">
+                    <div class="i">
+                      <a href="#">Egg supplies</a>
+                    </div> 
+                    <img src="{% static 'img/egg supplier.webp' %}" width="400px" height="400px" alt="" srcset="">
+                 </div>
+                 <div class="img">
+                    <div class="i">
+                        <a href="#">Fruit & Nuts</a>
+                    </div> 
+                    <img src="{% static 'img/fruit supplier.webp' %}" width="400px" height="400px" alt="" srcset="">
+                 </div>
+                 <div class="img">
+                    <div class="i">
+                        <a href="#">Grains & Flours</a>
+                    </div>
+                    <img src="{% static 'img/grains&flours supplier.webp' %}" width="400px" height="400px" alt="" srcset="">
+                      
+                 </div>
+                 <div class="img">
+                    <div class="i">
+                        <a href="#">Nutri-Gains</a>
+                    </div>
+                    <img src="{% static 'img/nutri gains.webp' %}" width="400px" height="400px" alt="" srcset="">
+                    
+                 </div>
+                 <div class="img">
+                    <div class="i">
+                        <a href="#">Pure Veggies</a>
+                    </div>
+                      <img src="{% static 'img/pure veggies.webp' %}" width="400px" height="400px" alt="" srcset="">
+                 </div>
+                 <div class="img">
+                    <div class="i">
+                        <a href="#">All Nutrients</a>
+                    </div>
+                    <img src="{% static 'img/all Nutrients.webp' %}"  width="400px" height="400px" alt="" srcset="">
+                 </div>
+            </div>
+        </section>
+    
+        <section id="Description">
+                <div id="des-head">
+                    <h1 id="text">Know About Nutrio Programme</h1>
+                    <p id="info">Fusce vulputate eleifend sapien</p>
+                </div>
+                <div id="content">
+                     <div class="flex-box">
+                        <div class="ftert">
+                            <div class="cont">
+                                <h1>Keeps Healthy Record</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ad aliquid beatae aperiam deleniti, iste nihil, veniam laudantium fuga laborum consequuntur quam accusantium aut, quas minima magni. Non, odit consequatur.</p>
+                            </div>
+                            <div class="img">
+                            <img src="{% static 'img/fruit-2.webp' %}" alt="" srcset="" width="66px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-box">
+                        <div class="ftert">
+                            <div class="img">
+                            <img src="{% static 'img/meat-4.webp' %}" alt="" srcset="" width="66px;">
+                               </div>
+                            <div class="cont">
+                                <h1>Meats Reduces Fat</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ad aliquid beatae aperiam deleniti, iste nihil, veniam laudantium fuga laborum consequuntur quam accusantium aut, quas minima magni. Non, odit consequatur.</p>
+                                
+                            </div>
+                        </div>
+                     </div>
+                     <div class="flex-box">
+                        <div class="ftert">
+                            <div class="cont">
+                                <h1>Eggs Make you Fit</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ad aliquid beatae aperiam deleniti, iste nihil, veniam laudantium fuga laborum consequuntur quam accusantium aut, quas minima magni. Non, odit consequatur.</p>
+                            </div>
+                            <div class="img">
+                            <img src="{% static 'img/egg.webp' %}" alt="" srcset="" width="66px;">
+                            </div>
+                        </div>
+                     </div>
+                     <div class="flex-box">
+                        <div class="ftert">
+                            <div class="img">
+                               <img src="{% static 'img/vegetables-5.webp' %}" alt="" srcset="" width="66px;">
+                            </div>
+                            <div class="cont">
+                                <h1>Pure Green Vegetables</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ad aliquid beatae aperiam deleniti, iste nihil, veniam laudantium fuga laborum consequuntur quam accusantium aut, quas minima magni. Non, odit consequatur.</p>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+        </section>
+        <section id="service">
+              <div id="our-service">
+                <div id="service-head">
+                    <h1>Our Services</h1>
+                    <p style="color:black">What we provide</p>
+                </div>
+                <div id="service-list">
+                    <ul>
+                        <li>
+                            <h2>Keeps Healthy Record</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore voluptatum eius ducimus quod adipisci, sunt ab quibusdam laboriosam omnis! Numquam reiciendis cumque molestiae enim est iusto iste doloribus similique voluptate?</p>
+                        </li>
+                        <li>
+                            <h2>Eggs Make you Fit</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore voluptatum eius ducimus quod adipisci, sunt ab quibusdam laboriosam omnis! Numquam reiciendis cumque molestiae enim est iusto iste doloribus similique voluptate?</p>
+                        </li>
+                        <li>
+                            <h2>Meats Reduces Fat</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore voluptatum eius ducimus quod adipisci, sunt ab quibusdam laboriosam omnis! Numquam reiciendis cumque molestiae enim est iusto iste doloribus similique voluptate?</p>
+                        </li>
+                    </ul>
+                </div>
+              </div>
+        </section>
+    </section>
+   <section id="team_banner">
+           <div id="team_banner_head">
+                <h1 id="fe">Our Team</h1>
+                <p>Vestibulum purus quam scelerisque mollis sed</p>
+           </div>
+           <div id="team_img">
+               <div class="img">
+                   <div class="img_and_icons">
+                        <img src="{% static 'img/june-celine.webp' %}" alt="" srcset="">
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+                            <li> <a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+                            <li> <a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        </ul>
+                   </div>
+                   <div class="team_name">
+                         <h1 class="name">June Celine</h1>
+                         <p class="position" style="font-weight: bolder;">Marketing Manager</p>
+                   </div>
+               </div>
+               <div class="img">
+                   <div class="img_and_icons">
+                        <img src="{% static 'img/lal-johnson.webp' %}" alt="" srcset="">
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+                            <li> <a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+                            <li> <a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        </ul>
+                   </div>
+                   <div class="team_name">
+                         <h1 class="name">Lal Johnson</h1>
+                         <p class="position" style="font-weight: bolder;">Store Manager</p>
+                   </div>
+               </div>
+               <div class="img">
+                   <div class="img_and_icons">
+                        <img src="{% static 'img/laila-berlinze.webp' %}" alt="" srcset="">
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+                            <li> <a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+                            <li> <a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        </ul>
+                   </div>
+                   <div class="team_name">
+                         <h1 class="name">Laila Berlinze</h1>
+                         <p class="position" style="font-weight: bolder;">Front Office</p>
+                   </div>
+               </div>
+               <div class="img">
+                   <div class="img_and_icons">
+                        <img src="{% static 'img/sam-milton.webp' %}" alt="" srcset="">
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+                            <li> <a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+                            <li> <a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        </ul>
+                   </div>
+                   <div class="team_name">
+                         <h1 class="name">Sam Milton</h1>
+                         <p class="position" style="font-weight: bolder;">Human Resource</p>
+                   </div>
+               </div> 
+           </div>
+   </section>
+   <footer id="footer" style="margin-top: 1100px;">
+    <div id="address-list">
+        <ul id="ad">
+           <li class="li">
+               <img src="{% static 'img./logo.webp' %}" alt="" srcset="">
+           </li>
+           <li class="li">
+               <i class="fa-solid fa-location-dot"></i> No: 58 A, East Aggarwal super Mart
+           </li>
+           <li  class="li"><i class="fa-solid fa-phone" ></i>423-845-6570</li>
+           <li id="email"><a href="email" style="color: white; position: relative;right:10px"><i class="fa-solid fa-envelope"></i>random@email.com</a></li>
+           <li class="li">
+               <ol id="navigation-bar" style="left: -63px;">
+                   <li id="twiter">
+                       <a href="#">
+                           <i class="fa-brands fa-twitter"></i>
+                       </a>
+                   </li>
+                   <li id="facebook">
+                       <a href="#">
+                           <i class="fa-brands fa-square-facebook"></i>
+                       </a>
+                   </li>
+                   <li id="pin">
+                       <a href="#">
+                           <i class="fa-brands fa-pinterest"></i>
+                       </a>
+                   </li>
+                   <li id="instagram">
+                       <a href="#">
+                           <i class="fa-brands fa-instagram"></i>
+                       </a>
+                   </li>
+               </ol>
+           </li>
+        </ul>
+    </div>
+     <div id="footer-list-item">
+       <ol class="list-items">
+           <span class="list-heading">Help</span>
+           <li class="item">
+               <a href="#" class="a"><i class="fa-solid fa-chevron-right ar"></i>search</a>
+           </li>
+           <li class="item">
+               <a href="#" class="a"><i class="fa-solid fa-chevron-right ar"></i>Help</a>
+           </li>
+           <li class="item">
+               <a href="#" class="a"><i class="fa-solid fa-chevron-right ar"></i>Information</a>
+           </li>
+           <li class="item">
+               <a href="#" class="a"><i class="fa-solid fa-chevron-right ar"></i>Privacy Policy</a>
+           </li>
+           <li class="item">
+               <a href="#" class="a"><i class="fa-solid fa-chevron-right ar"></i>Shipping Information</a>
+           </li class="item">
+       </ol>
+       <ol class="list-items">
+           <span class="list-heading">support</span>
+           <li class="item">
+               <a href="#" class="a"><i class="fa-solid fa-chevron-right ar"></i>Contact</a>
+           </li>
+           <li class="item">
+               <a href="#" class="a"><i class="fa-solid fa-chevron-right ar"></i>About Us</a>
+           </li>
+           <li class="item">
+               <a href="#" class="a"><i class="fa-solid fa-chevron-right ar"></i>Carrers</a>
+           </li>
+           <li class="item">
+               <a href="#" class="a"><i class="fa-solid fa-chevron-right ar"></i>Refund & Returns</a>
+           </li>
+           <li class="item">
+               <a href="#" class="a"><i class="fa-solid fa-chevron-right ar"></i>Deliveries</a>
+           </li>
+       </ol>
+       <ol class="list-items">
+           <span class="list-heading">Information</span>
+           <li class="item">
+               <a href="#" class="a"><i class="fa-solid fa-chevron-right ar"></i>Search Terms</a>
+           </li>
+           <li class="item">
+               <a href="#" class="a"><i class="fa-solid fa-chevron-right"></i>Advanced search</a>
+           </li>
+           <li class="item">
+               <a href="#" class="a"><i class="fa-solid fa-chevron-right ar"></i>Helps &Fags</a>
+           </li>
+           <li class="item">
+               <a href="#" class="a"><i class="fa-solid fa-chevron-right ar"></i>Store Location</a>
+           </li>
+           <li class="item">
+               <a href="#" class="a"><i class="fa-solid fa-chevron-right ar"></i>Order & Returns</a>
+           </li>
+       </ol>
+     </div>
+</footer> 
+</body>
+</html>

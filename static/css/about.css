@@ -1,0 +1,230 @@
+#about-section{
+    margin-top: 258px;
+}
+#head{
+    width: 101%;
+    height: 123px;
+    margin: -8px;
+    background-color: rgb(137 199 74);;
+}
+#head #head-content{
+    width: fit-content;
+    margin: auto;
+}
+#head #head-content h1{
+    font-size: 35px;
+    margin: 0px 20px;
+    
+    position: relative;
+    top: 9px;
+    font-family: cursive;
+    color: white
+}
+#head #head-content #para,#a{
+    color: white;
+    font-weight: lighter;
+    transition: 1s;
+    margin-left: 8px;
+    
+}
+#head #head-content #a:hover{
+    color: black;
+}
+
+#suppliers-section{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 34px;
+    margin-left: 107px;
+}
+#suppliers-section .img{
+    padding: 16px;
+    transition: 1s;
+}
+#suppliers-section .img .i{
+    height: 400px;
+    position: absolute;
+    width: 400px;
+    /* background-color: black; */
+    transition: 1s;
+}
+#suppliers-section .img .i:hover{
+    opacity: 0.7;
+    background-color: black;
+
+}
+ 
+#suppliers-section .img .i a{
+    position: relative;
+    left: 150px;
+    top: 200px;
+    color: white;
+    font-family: cursive;
+    display: none;    
+    transition: 1s;
+}
+#suppliers-section .img .i a:hover{
+    color:rgb(137 199 74); 
+}
+#suppliers-section .img .i:hover a{
+    display: block;
+   
+}
+
+#Description{
+    display: flex;
+    flex-direction: column;
+    background-color: #89c74a;
+    width: 101%;
+    margin: 0px -8px;
+    margin-top: 102px;
+}
+#Description #des-head{
+    width: fit-content;
+    margin: auto;
+    margin-top: 1%;
+}
+#Description #des-head #text{
+    font-size: 30px;
+    color: white;
+    font-family: cursive;
+    margin-bottom: 10px;
+}
+#Description #des-head #info{
+    width: fit-content;
+    margin: auto;
+    color: white;
+}
+#Description #content{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 81px;
+    margin-bottom: 39px;
+}
+#Description #content .flex-box{
+    flex: 50%;
+}
+#Description #content>div .ftert{
+    width: 597px;
+    float: right;
+    display: flex;
+}
+#Description #content>div>div .cont{
+    color: white;
+}
+#Description #content>div>div .img{
+    background-color: white;
+    height: 71px;
+    width: 155px;
+    border-radius: 76px;
+    margin-top: 56px;
+    margin-right: 17px;
+    transition: 1s all;
+}
+
+#Description #content>div>div .img:hover{
+    background-color: orangered;
+}
+
+#service{
+    background-image: url("groca-new-04.webp");
+    width: 47%;
+    height: 1000px;
+    background-repeat: no-repeat;
+    float: right;
+    margin-right: 77px;
+}
+#service #our-service{
+    position: relative;
+    right: 600px;
+    top: 100px;
+}
+
+#service #our-service #service-head{
+    width: fit-content;
+    font-size: 24px;
+}
+#service #our-service #service-head h1{
+    color: green;
+    font-family: cursive;
+    margin: 7px;
+}
+#service #service-list ul{
+    list-style-type: none;
+    margin-left: 82px;
+}
+#service #our-service #service-list ul li{
+    width: 399px;
+    margin-bottom: 100px;
+}
+#service #our-service #service-list ul li h2{
+    font-family: cursive;
+} 
+#team_banner{
+    background-image: url('team-bg.webp');
+    background-size: cover;
+    width: 101%;
+    height: 739px;
+    position: relative;
+    top: 984px;
+    margin: -8px; 
+}
+#team_banner #team_banner_head{
+    width: 764px;
+    margin: auto;
+    left: 126px;
+    position: relative;
+    top: 96px;
+}
+#team_banner #team_banner_head #fe{
+    margin-left: 109px;
+    font-size: 29px;
+    font-family: cursive;
+}
+#team_banner #team_img{
+    display: flex;
+    
+}
+#team_banner #team_img>div{
+    margin: 32px;
+    position: relative;
+    top: 140px;
+    left: 37px;
+
+}
+#team_banner #team_img .img_and_icons ul{
+    position: absolute;
+    bottom: 122px;
+    left: -10px;
+    list-style-type: none;
+    display: none;
+}
+#team_banner #team_img .img_and_icons:hover ul{
+    display: flex;
+}
+#team_banner #team_img .img_and_icons ul>li{
+    padding: 4px;
+    background-color: #89c74a;
+    margin: 0px 12px;
+    width: 30px;    
+}
+#team_banner #team_img .img_and_icons ul>li a{
+    position: relative;
+    left: -9px;
+    font-size: 22px;
+    color: white;
+    transition: 1s;
+}
+#team_banner #team_img .img_and_icons ul>li:hover a{
+    color:black
+}
+#team_banner #team_img .img_and_icons img{
+    width: 300px;
+    height: 300px;
+    transition: 1s;
+}
+
+#team_banner #team_img .team_name{
+    width: fit-content;
+    margin: auto;
+}
